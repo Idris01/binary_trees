@@ -40,5 +40,9 @@ size_t binary_tree_depth(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
+int binary_tree_balance(const binary_tree_t *tree);
+int count_binary_left(const binary_tree_t *left_child);
+int count_binary_right(const binary_tree_t *right_child);
+
 
 #endif /* _BINARY_TREES_H_ */
