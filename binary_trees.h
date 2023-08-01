@@ -43,6 +43,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 int count_binary_left(const binary_tree_t *left_child);
 int count_binary_right(const binary_tree_t *right_child);
+int binary_tree_is_full(const binary_tree_t *tree);
 
 
 #endif /* _BINARY_TREES_H_ */
