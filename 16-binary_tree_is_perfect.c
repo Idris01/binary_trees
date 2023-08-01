@@ -4,7 +4,6 @@
  * @tree: pointer to node of binary tree
  *
  * Return: 1 if tree is perfect otherwise 0
- *
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -41,4 +40,32 @@ int _is_perfect_helper(const binary_tree_t *tree)
 	left = tree->left == NULL ? 1 : binary_tree_is_perfect(tree->left);
 	right = tree->right == NULL ? 1 : binary_tree_is_perfect(tree->right);
 	return (status && left && right);
+}
+
+/**
+ * count_binary_left - Count all left nodes
+ * @left_child: pointer to the left_child of binary tree
+ *
+ * Return: integer number of nodes in the left of binary tree
+ */
+int count_binary_left(const binary_tree_t *left_child)
+{
+	if (left_child == NULL)
+		return (0);
+	return (1 + count_binary_left(left_child->left));
+}
+
+
+/**
+ * count_binary_right - Count all right nodes
+ * @right_child: pointer to the right_child of binary tree
+ *
+ * Return: integer number of nodes in the right of binary tree
+ */
+
+int count_binary_right(const binary_tree_t *right_child)
+{
+	if (right_child == NULL)
+		return (0);
+	return (1 + count_binary_right(right_child->right));
 }
