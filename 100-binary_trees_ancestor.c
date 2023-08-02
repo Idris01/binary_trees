@@ -17,7 +17,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	if (first == NULL || second == NULL)
 		return (NULL);
 	if (first == second)
-		return (void *)first;
+		return ((void *)first);
 	parent1 = (void *)first;
 	parent2 = (void *)second;
 	while (parent1 != NULL || parent2 != NULL)
